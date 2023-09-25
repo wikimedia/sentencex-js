@@ -1,0 +1,45 @@
+{
+  "name": "sentencex",
+  "version": "0.1.0",
+  "description": "Sentence segmentation library",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint src test",
+    "test:unit": "mocha",
+    "test": "npm run lint && npm run test:unit"
+  },
+  "bin": {
+		"segment": "bin/segment.mjs"
+	},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santhoshtr/sentencex-js.git"
+  },
+  "keywords": [
+    "nlp",
+    "sentence-segmentation"
+  ],
+  "author": "Santhosh Thottingal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/santhoshtr/sentencex-js/issues"
+  },
+  "homepage": "https://github.com/santhoshtr/sentencex-js#readme",
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/plugin-syntax-import-assertions": "^7.22.5",
+    "@rollup/plugin-json": "^6.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint": "^8.50.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.0.3",
+    "rollup-plugin-esbuild": "^6.0.0",
+    "rollup": "^3.29.3"
+  },
+  "dependencies": {}
+}
