@@ -46,8 +46,4 @@ const abbreviations = new Set([
 
 export default class Malayalam extends BaseLanguage {
   static abbreviations = abbreviations
-  constructor () {
-    super()
-    this.language = 'ml'
-  }
 }

@@ -33,8 +33,4 @@ const abbreviations = new Set([
 
 export default class Bengali extends BaseLanguage {
   static abbreviations = abbreviations
-  constructor () {
-    super()
-    this.language = 'bn'
-  }
 }

@@ -77,8 +77,4 @@ const abbreviations = new Set([
 
 export default class Bulgarian extends BaseLanguage {
   static abbreviations = abbreviations
-  constructor () {
-    super()
-    this.language = 'bg'
-  }
 }

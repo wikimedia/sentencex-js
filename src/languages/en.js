@@ -222,8 +222,4 @@ const abbreviations = new Set([
 
 export default class English extends BaseLanguage {
   static abbreviations = abbreviations
-  constructor () {
-    super()
-    this.language = 'en'
-  }
 }

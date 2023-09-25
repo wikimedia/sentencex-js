@@ -67,8 +67,4 @@ const abbreviations = new Set([
 
 export default class Tamil extends BaseLanguage {
   static abbreviations = abbreviations
-  constructor () {
-    super()
-    this.language = 'ta'
-  }
 }

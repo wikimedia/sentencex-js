@@ -148,11 +148,6 @@ export default class Finnish extends BaseLanguage {
     'joulukuu'
   ])
 
-  constructor () {
-    super()
-    this.language = 'fi'
-  }
-
   continueInNextWord (textAfterBoundary) {
     if (textAfterBoundary.match(/^\W*[0-9a-z]/)) {
       return true
