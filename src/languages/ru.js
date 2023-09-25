@@ -76,6 +76,6 @@ export default class Russian extends BaseLanguage {
   static abbreviations = abbreviations
 
   continueInNextWord (textAfterBoundary) {
-    return textAfterBoundary.match(/^\W*[0-9a-z]/)
+    return textAfterBoundary.match(/^[0-9a-zа-я]/)
   }
 }

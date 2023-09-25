@@ -1,8 +1,10 @@
 import Arabic from './ar.js'
+import Armenian from './hy.js'
 import Bengali from './bn.js'
 import Bulgarian from './bg.js'
 import Burmese from './my.js'
 import Catalan from './ca.js'
+import Danish from './da.js'
 import Deutsch from './de.js'
 import Dutch from './nl.js'
 import English from './en.js'
@@ -29,6 +31,7 @@ export default {
   bg: Bulgarian,
   bn: Bengali,
   ca: Catalan,
+  da: Danish,
   de: Deutsch,
   el: Greek,
   en: English,
@@ -37,6 +40,7 @@ export default {
   fr: French,
   gu: Gujarati,
   hi: Hindi,
+  hy: Armenian,
   kn: Kannada,
   ml: Malayalam,
   mr: Marathi,

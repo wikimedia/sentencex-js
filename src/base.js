@@ -38,10 +38,9 @@ export default class Language {
   static emailRegex = /[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}/g
 
   static numberedReferenceRegex = /^(\[\d+])+/
-  static sentenceBreakRegex = this.GLOBAL_SENTENCE_BOUNDARY_REGEX
+  static sentenceBreakRegex = Language.GLOBAL_SENTENCE_BOUNDARY_REGEX
 
   constructor () {
-    this.language = 'base'
     this.abbreviations = this.constructor.abbreviations
   }
 
@@ -111,20 +110,20 @@ export default class Language {
     const skippableRanges = []
 
     // Find matches using quotesRegex and add spans to skippableRanges
-    const quotesMatches = text.matchAll(Language.quotesRegex)
+    const quotesMatches = text.matchAll(this.constructor.quotesRegex)
 
     for (const match of quotesMatches) {
       skippableRanges.push([match.index, match.index + match[0].length])
     }
 
     // Find matches using parensRegex and add spans to skippableRanges
-    const parensMatches = text.matchAll(Language.parensRegex)
+    const parensMatches = text.matchAll(this.constructor.parensRegex)
     for (const match of parensMatches) {
       skippableRanges.push([match.index, match.index + match[0].length])
     }
 
     // Find matches using emailRegex and add spans to skippableRanges
-    const emailMatches = text.matchAll(Language.emailRegex)
+    const emailMatches = text.matchAll(this.constructor.emailRegex)
     for (const match of emailMatches) {
       skippableRanges.push([match.index, match.index + match[0].length])
     }
@@ -144,7 +143,7 @@ export default class Language {
       // Find all matches of sentence breaks in the paragraph.
       const matches = []
       let match
-      while ((match = Language.sentenceBreakRegex.exec(paragraph)) !== null) {
+      while ((match = this.constructor.sentenceBreakRegex.exec(paragraph)) !== null) {
         matches.push(match)
       }
 
