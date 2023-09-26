@@ -148,6 +148,7 @@ export default class Language {
       }
 
       const skippableRanges = this.getSkippableRanges(paragraph)
+
       // Iterate over each match of sentence breaks.
       for (let j = 0; j < matches.length; j++) {
         const match = matches[j]
@@ -164,6 +165,7 @@ export default class Language {
 
         for (let sri = 0; sri < skippableRanges.length; sri++) {
           const [skipStart, skipEnd] = skippableRanges[sri]
+
           if (boundary > skipStart && boundary < skipEnd) {
             if (boundary + 1 === skipEnd && this.isPunctuationBetweenQuotes()) {
               boundary = skipEnd
