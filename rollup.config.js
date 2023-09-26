@@ -5,10 +5,20 @@ import esbuild from 'rollup-plugin-esbuild'
 export default [
   {
     input: 'src/index.js',
-    output: {
-      name: pkg.name,
-      file: pkg.main
-    },
+    output: [
+      {
+        name: pkg.name,
+        file: pkg.module,
+        format: 'esm',
+        sourcemap: true
+      },
+      {
+        name: pkg.name,
+        file: pkg.main,
+        format: 'umd',
+        sourcemap: true
+      }
+    ],
     plugins: [
       json(),
       esbuild({
