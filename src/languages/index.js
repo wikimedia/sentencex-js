@@ -13,6 +13,7 @@ import French from './fr.js'
 import Greek from './el.js'
 import Gujarati from './gu.js'
 import Hindi from './hi.js'
+import Japanese from './ja.js'
 import Kannada from './kn.js'
 import Kazakh from './kk.js'
 import Malayalam from './ml.js'
@@ -42,6 +43,7 @@ export default {
   gu: Gujarati,
   hi: Hindi,
   hy: Armenian,
+  ja: Japanese,
   kk: Kazakh,
   kn: Kannada,
   ml: Malayalam,
