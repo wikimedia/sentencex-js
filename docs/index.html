@@ -102,8 +102,8 @@
             const classes = ["red", "blue", "orange", "green", "yellow", "indigo", "lime"];
 
             function doSegment() {
-                language = languageEl.value;
-                text = inputEl.value;
+                const language = languageEl.value;
+                const text = inputEl.value;
                 let sentences = segment(language, text)
                 let sentenceSpans = [];
 
