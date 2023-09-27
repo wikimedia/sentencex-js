@@ -1,6 +1,6 @@
 {
   "name": "sentencex",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Sentence segmentation library",
   "main": "dist/cjs/index.cjs",
   "module": "dist/esm/index.js",
@@ -11,10 +11,6 @@
     }
   },
   "type": "module",
-  "files": [
-    "src",
-    "dist"
-  ],
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint src test",
