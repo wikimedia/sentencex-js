@@ -39,16 +39,21 @@ export default class Language {
 
   static numberedReferenceRegex = /^(\[\d+])+/
   static sentenceBreakRegex = Language.GLOBAL_SENTENCE_BOUNDARY_REGEX
+  static abbreviationChar = '.'
 
   constructor () {
     this.abbreviations = this.constructor.abbreviations
   }
 
-  is_abbreviation (head, tail) {
+  is_abbreviation (head, tail, seperator) {
     // """
     // Do not break in abbreviations. Example D. John, St. Peter
     // In the case of "This is Dr. Watson", head is "This is D/, tail is " Watson"
     // """
+    if (seperator !== this.constructor.abbreviationChar) {
+      return false
+    }
+
     const lastWord = this.get_lastword(head)
     if (!lastWord.length) {
       return false
@@ -88,7 +93,8 @@ export default class Language {
       return null
     }
 
-    if (this.is_abbreviation(head, tail)) {
+    const seperator = match[0]
+    if (this.is_abbreviation(head, tail, seperator)) {
       return null
     }
 

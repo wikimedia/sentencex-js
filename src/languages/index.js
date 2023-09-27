@@ -1,3 +1,4 @@
+import Amharic from './am.js'
 import Arabic from './ar.js'
 import Armenian from './hy.js'
 import Bengali from './bn.js'
@@ -29,6 +30,7 @@ import Tamil from './ta.js'
 import Telugu from './te.js'
 
 export default {
+  am: Amharic,
   ar: Arabic,
   bg: Bulgarian,
   bn: Bengali,
