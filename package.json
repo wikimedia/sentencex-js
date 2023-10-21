@@ -51,5 +51,7 @@
     "rollup-plugin-esbuild": "^6.0.0",
     "rollup": "^3.29.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "unicodejs": "^13.0.3"
+  }
 }
