@@ -1,8 +1,15 @@
-import GLOBAL_SENTENCE_TERMINATORS from './terminators.js'
+// HACK: put sentencebreakproperties file in this repo, until it reaches the npm release of unicodejs
+import sentencebreakproperties from '../src/unicodejs.sentencebreakproperties.cjs'
+import unicodejs from 'unicodejs/dist/unicodejs.js'
 
 export default class Language {
+  static GLOBAL_SENTENCE_TERMINATORS = unicodejs.charRangeArrayRegexp([].concat(
+    sentencebreakproperties.ATerm,
+    sentencebreakproperties.STerm
+  ))
+
   static GLOBAL_SENTENCE_BOUNDARY_REGEX = new RegExp(
-    `[${GLOBAL_SENTENCE_TERMINATORS.join('')}]+`,
+    `(${Language.GLOBAL_SENTENCE_TERMINATORS})+`,
     'g'
   )
 

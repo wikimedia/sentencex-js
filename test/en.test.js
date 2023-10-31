@@ -216,6 +216,14 @@ const tests = {
   '“How many? I don’t know.”': ['“How many? I don’t know.”']
 
 }
+// Check for spurious matching of unpaired surrogate in RegExp character class. This can happen
+// because a sentence terminator above U+FFFF is represented as two Javascript characters,
+// and so putting it into a RegExp character class will match either surrogate separately.
+// For example, U+1BC9F (Duployan Punctuation Chinook Full Stop) is represented as
+// '\uD82F\uDC9F', but a character class [\uD82F\uDC9F] will match other characters such as
+// U+1BC00 (represented as '\uD82F\uDC00').
+const lettersAboveFFFF = String.fromCodePoint(0x1BC00).repeat(10)
+tests[lettersAboveFFFF] = [lettersAboveFFFF]
 
 describe('English segment()', function () {
   for (const [text, expectedSentences] of Object.entries(tests)) {
