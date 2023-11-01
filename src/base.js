@@ -3,7 +3,7 @@ import GLOBAL_SENTENCE_TERMINATORS from './terminators.js'
 export default class Language {
   static GLOBAL_SENTENCE_BOUNDARY_REGEX = new RegExp(
     `[${GLOBAL_SENTENCE_TERMINATORS.join('')}]+`,
-    'g'
+    'gu'
   )
 
   static EXCLAMATION_WORDS = new Set(
