@@ -4,7 +4,6 @@ import GLOBAL_SENTENCE_TERMINATORS from './../terminators.js'
 
 const hyTerminators = ['։', '՜', ':'].concat(GLOBAL_SENTENCE_TERMINATORS)
 hyTerminators.splice(hyTerminators.indexOf('.'), 1)
-hyTerminators.splice(hyTerminators.indexOf('...'), 1)
 const hyTerminatorsRegex = new RegExp(`[${hyTerminators.join('')}]+`, 'g')
 
 export default class Armenian extends BaseLanguage {
