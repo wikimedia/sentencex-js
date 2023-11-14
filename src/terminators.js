@@ -1,5 +1,6 @@
 // unicode code points generated with Unicode::Tussle perl script:
 // unichars -aBbs '[\p{Sentence_Break=STerm}\p{Sentence_Break=ATerm}]' | awk '$2="\""$2"\", //"'
+// Refer: https://www.unicode.org/Public/UCD/latest/ucd/auxiliary/SentenceBreakProperty.txt
 const GLOBAL_SENTENCE_TERMINATORS = [
   '!', // U+00021 BC=ON BLK=Basic_Latin SC=Common EXCLAMATION MARK
   '.', // U+0002E BC=CS BLK=Basic_Latin SC=Common FULL STOP
@@ -156,8 +157,8 @@ const GLOBAL_SENTENCE_TERMINATORS = [
   '𝪈' // U+1DA88 BC=L BLK=Sutton_SignWriting SC=SignWriting SIGNWRITING FULL STOP
 ].concat([
   // Additional manual entries.
-  '...', //  U+2026 HORIZONTAL ELLIPSIS
-  '。' // U+3002 IDEOGRAPHIC FULL STOP
+  '。', // U+3002 IDEOGRAPHIC FULL STOP
+  '｡' // U+FF61 HALFWIDTH IDEOGRAPHIC FULL STOP
 ])
 
 export default GLOBAL_SENTENCE_TERMINATORS
