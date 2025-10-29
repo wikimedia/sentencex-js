@@ -1,3 +1,6 @@
+> NOTE: 
+> This repository is deprecated, The original [sentencex](https://github.com/santhoshtr/sentencex) library is written in Rust and has node bindings. The node library name and APIs are same.
+
 # Sentence segmenter
 
 [![tests](https://github.com/santhoshtr/sentencex-js/actions/workflows/nodejs.yaml/badge.svg)](https://github.com/santhoshtr/sentencex/actions/workflows/nodejs.yaml)
